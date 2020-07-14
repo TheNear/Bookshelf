@@ -20,7 +20,7 @@ code {
 
 #container {
   display: flex;
-  font-display: column;
+  flex-direction: column;
   max-width: 1080px;
   height: 100vh;
   margin: 0 auto;
