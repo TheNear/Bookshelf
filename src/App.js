@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [isEdit, isEditToggle] = useState(false);
+
   return (
-    <div className="App">
-      213123213
-    </div>
+    <>
+      <h1>Книжная полка</h1>
+    </>
   );
 }
 
