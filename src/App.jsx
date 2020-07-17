@@ -14,7 +14,7 @@ function App() {
           isEditToggle(!isEdit);
         }}
       >
-        Кнопка
+        {isEdit ? `Отменить` : `Добавить книгу`}
       </button>
       <BookList />
     </>
