@@ -21,11 +21,16 @@
 
 
 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex-grow: 1;
   padding: 0 20px;
+  cursor: pointer;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }

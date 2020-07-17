@@ -6,7 +6,8 @@ function BookItem({ title, desc, img, date, author }) {
   const [fullView, setFullView] = useState(false);
 
   const viewFullHandler = (evt) => {
-    if (evt.keyCode === 13) {
+    if (evt.keyCode === 13 || evt.keyCode === 32) {
+      evt.preventDefault();
       setFullView(!fullView);
     }
   };

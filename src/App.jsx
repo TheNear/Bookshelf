@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import BookList from "./components/BooksList/BookList";
+import BookEditor from "./components/BookEditor/BookEditor";
 
 function App() {
   const [isEdit, isEditToggle] = useState(false);
@@ -16,7 +17,7 @@ function App() {
       >
         {isEdit ? `Отменить` : `Добавить книгу`}
       </button>
-      <BookList />
+      {isEdit ? <BookEditor /> : <BookList />}
     </>
   );
 }
