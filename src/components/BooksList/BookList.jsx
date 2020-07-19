@@ -1,10 +1,16 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import style from "./BookList.module.css";
 import BookItem from "../BookItem/BookItem";
+import { removeBook } from "../../redux/books/action";
 
 function BookList() {
   const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+
+  // const removeBookHandler = (id) => {
+  //   dispatch(removeBook(id));
+  // };
 
   return (
     <ul className={style.book_list}>
@@ -16,6 +22,7 @@ function BookList() {
           date={book.date}
           author={book.author}
           img={book.imgUrl}
+          removeHandler={() => dispatch(removeBook(book.id))}
         />
       ))}
     </ul>

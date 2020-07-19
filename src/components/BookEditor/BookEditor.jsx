@@ -1,8 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import style from "./BookEditor.module.css";
 import CustomInput from "../../componentsHelper/CustomInput/CustomInput";
 import CustomButton from "../../componentsHelper/CustomButton/CustomButton";
 import { useForm } from "../../hooks/useForm";
+import { addBook } from "../../redux/books/action";
 
 const editorInputs = [
   {
@@ -32,11 +34,12 @@ const editorInputs = [
 ];
 
 function BookEditor() {
+  const dispatch = useDispatch();
   const { values, errors, handleChange, handleSubmit } = useForm();
 
   const formHandleSubmit = (evt) => {
     evt.preventDefault();
-    handleSubmit();
+    dispatch(addBook(values));
   };
 
   const formHandleCancel = () => {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import style from "./BookItem.module.css";
 
-function BookItem({ title, desc, img, date, author }) {
+function BookItem({ title, desc, img, date, author, removeHandler }) {
   const [fullView, setFullView] = useState(false);
 
   const viewFullHandler = (evt) => {
@@ -31,7 +31,9 @@ function BookItem({ title, desc, img, date, author }) {
       </div>
       <div className={style.buttons}>
         <button type="button">Редактировать</button>
-        <button type="button">Удалить</button>
+        <button type="button" onClick={removeHandler}>
+          Удалить
+        </button>
       </div>
     </li>
   );
@@ -45,6 +47,7 @@ BookItem.propTypes = {
   img: PropTypes.string,
   date: PropTypes.string,
   author: PropTypes.string,
+  removeHandler: PropTypes.func.isRequired,
 };
 
 BookItem.defaultProps = {
