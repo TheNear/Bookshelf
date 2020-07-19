@@ -1,6 +1,7 @@
+/* eslint-disable import/prefer-default-export */
 import { useState } from "react";
 
-const useForm = (callback, validate) => {
+export const useForm = (callback, validate) => {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
 
@@ -17,6 +18,7 @@ const useForm = (callback, validate) => {
   };
 
   const handleChange = (evt) => {
+    evt.persist();
     setValues((value) => ({
       ...value,
       [evt.target.name]: evt.target.value,
@@ -30,5 +32,3 @@ const useForm = (callback, validate) => {
     errors,
   };
 };
-
-export default useForm;

@@ -2,22 +2,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function CustomButton({ name, className, type }) {
+function CustomButton({ children, className, type }) {
   return (
     <button type={type} className={className}>
-      {name}
+      {children}
     </button>
   );
 }
 
 CustomButton.propTypes = {
-  type: PropTypes.oneOf(["button", "sumbit", "reset"]),
-  name: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(["button", "submit", "reset"]),
+  children: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 CustomButton.defaultProps = {
   type: "button",
+  className: "",
 };
 
 export default CustomButton;
