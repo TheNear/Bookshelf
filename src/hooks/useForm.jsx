@@ -12,6 +12,7 @@ export const useForm = (callback, validate) => {
 
     if (!Object.keys(errorsValid).length) {
       callback(values);
+      setValues({});
     } else {
       setErrors(errorsValid);
     }

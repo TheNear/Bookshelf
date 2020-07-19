@@ -12,6 +12,7 @@
     ],
     "rules": {
       "semi": 1,
+      "import/prefer-default-export": 0,
       "react/jsx-props-no-spreading": "off",
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "prettier/prettier": [

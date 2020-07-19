@@ -5,6 +5,7 @@ import CustomInput from "../../componentsHelper/CustomInput/CustomInput";
 import CustomButton from "../../componentsHelper/CustomButton/CustomButton";
 import { useForm } from "../../hooks/useForm";
 import { addBook } from "../../redux/books/action";
+import { bookValidation } from "../../assets/js/validation";
 
 const editorInputs = [
   {
@@ -35,12 +36,15 @@ const editorInputs = [
 
 function BookEditor() {
   const dispatch = useDispatch();
-  const { values, errors, handleChange, handleSubmit } = useForm();
 
-  const formHandleSubmit = (evt) => {
-    evt.preventDefault();
+  const formHandleSubmit = (values) => {
     dispatch(addBook(values));
   };
+
+  const { values, errors, handleChange, handleSubmit } = useForm(
+    formHandleSubmit,
+    bookValidation
+  );
 
   const formHandleCancel = () => {
     // evt.preventDefault();
@@ -49,7 +53,7 @@ function BookEditor() {
   return (
     <div className={style.wrapper}>
       <h2>Редактирование книги</h2>
-      <form onSubmit={formHandleSubmit}>
+      <form onSubmit={handleSubmit}>
         {editorInputs.map((input) => (
           <CustomInput
             key={input.id}
