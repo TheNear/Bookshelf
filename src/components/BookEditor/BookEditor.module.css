@@ -31,3 +31,13 @@
 .button_save path {
   fill: #89c4fc;
 }
+
+@media only screen  and (max-width: 460px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .button_save {
+    margin: 0 0 20px 0;
+  }
+}
