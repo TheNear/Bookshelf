@@ -2,7 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import style from "./CustomInput.module.css";
 
-function CustomInput({ title, type, id, name, value, errors, onChange }) {
+function CustomInput({
+  title,
+  type,
+  id,
+  name,
+  value,
+  errors,
+  onChange,
+  placeholder,
+}) {
   return (
     <div className={style.input_wrapper}>
       {title && (
@@ -13,6 +22,7 @@ function CustomInput({ title, type, id, name, value, errors, onChange }) {
       <input
         className={`${style.input} ${errors && style.input_error}`}
         value={value}
+        placeholder={placeholder}
         onChange={onChange}
         type={type}
         name={name}
@@ -33,6 +43,7 @@ CustomInput.propTypes = {
   errors: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
+  placeholder: PropTypes.string,
 };
 
 CustomInput.defaultProps = {
@@ -40,6 +51,7 @@ CustomInput.defaultProps = {
   type: "text",
   value: null,
   errors: null,
+  placeholder: "",
   onChange: () => {},
 };
 

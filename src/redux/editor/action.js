@@ -4,9 +4,9 @@ export const resetEditor = () => ({
   type: RESET_EDITED_BOOK,
   payload: {
     id: Date.now(),
-    book_title: "Заголовок книги",
+    book_title: "",
     book_img: "",
-    book_author: "Автор книги",
+    book_author: "",
     book_date: "",
   },
 });

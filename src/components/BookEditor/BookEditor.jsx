@@ -18,24 +18,28 @@ const editorInputs = [
     title: "Наименование",
     id: "input__book-title",
     type: "text",
+    placeholder: "JavaScript для чайников",
   },
   {
     name: "book_author",
     title: "Автор",
     id: "input__book-author",
     type: "text",
+    placeholder: "Минник, Холланд",
   },
   {
     name: "book_date",
     title: "Год выпуска",
     id: "input__book-date",
     type: "text",
+    placeholder: "2014",
   },
   {
     name: "book_img",
     title: "Изображение",
     id: "input__book-image",
     type: "text",
+    placeholder: "http://placehold.it/100x150.jpg",
   },
 ];
 
@@ -80,6 +84,7 @@ function BookEditor({ toggleEditor }) {
             title={input.title}
             id={input.id}
             type={input.type}
+            placeholder={input.placeholder}
             value={values[input.name] || ""}
             errors={errors[input.name] || ""}
             onChange={handleChange}

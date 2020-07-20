@@ -2,9 +2,9 @@ import { SET_EDITED_BOOK, RESET_EDITED_BOOK } from "./types";
 
 const initialState = {
   id: Date.now(),
-  book_title: "Заголовок книги",
+  book_title: "",
   book_img: "",
-  book_author: "Автор книги",
+  book_author: "",
   book_date: "",
 };
 
