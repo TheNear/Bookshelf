@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import style from "./BookItem.module.css";
 import CustomButton from "../../componentsHelper/CustomButton/CustomButton";
 import { ReactComponent as EditPic } from "../../assets/img/pencil.svg";
 import { ReactComponent as DeletePic } from "../../assets/img/garbage.svg";
+import epamimg from "../../assets/img/epambook.png";
 
 function BookItem({ title, img, date, author, removeHandler, editHandler }) {
+  const [imageUrl, setImageUrl] = useState(img);
+
   return (
     <li className={style.book}>
       <div className={style.image_wrapper}>
         <img
-          src={img || "http://placehold.it/100x150"}
+          src={imageUrl || epamimg}
           width="100px"
           height="150px"
           alt="Обложка книги"
           className={style.image}
+          onError={() => setImageUrl(epamimg)}
         />
       </div>
       <div className={style.info}>

@@ -2,7 +2,8 @@ const MIN_TITLE_LENGTH = 5;
 const MAX_TITLE_LENGTH = 100;
 const MIN_AUTHOR_LENGTH = 3;
 const MAX_AUTHOR_LENGTH = 30;
-const IMG_URL_REGEXP = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/;
+// const IMG_URL_REGEXP = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/;
+const IMG_REGEXP = /\.(?:jpg|png|bmp|gif|jpeg)/;
 const DATE_REGEXP = /^\d{4}$/;
 const MAX_DATE_YEAR = "2017";
 
@@ -33,7 +34,7 @@ export const bookValidation = ({
     errors.book_date = `Некорректная дата. Пример : "2004". `;
   }
 
-  if (img && !IMG_URL_REGEXP.test(img)) {
+  if (img && !IMG_REGEXP.test(img)) {
     errors.book_img = `Некорректный адресс введеного изображения`;
   }
 
