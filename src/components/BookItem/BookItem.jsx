@@ -11,6 +11,8 @@ function BookItem({ title, img, date, author, removeHandler, editHandler }) {
       <div className={style.image_wrapper}>
         <img
           src={img || "http://placehold.it/100x150"}
+          width="100px"
+          height="150px"
           alt="Обложка книги"
           className={style.image}
         />

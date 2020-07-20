@@ -10,10 +10,11 @@
 
 .main_button {
   align-self: start;
-  background-color: #1489f8;
+  background-color: #6082a3;
   font-size: 20px;
   margin-bottom: 30px;
-  transition: all 0.5s ease;
+  margin-left: 10px;
+  transition: background-color 0.5s ease;
   width: 250px;
 }
 
@@ -28,7 +29,7 @@
 
 .main_button path {
   animation: show 0.7s ease;
-  fill: #1489f8;
+  fill: #6082a3;
 }
 
 .main_button_cancel path {
@@ -37,7 +38,8 @@
 }
 
 .title {
-  color: #1365b4;
+  color: #ffffff;
+  text-shadow: 0 0 5px #1489f8;
   font-size: 45px;
   margin-bottom: 40px;
 }
@@ -62,6 +64,7 @@
 
   .main_button {
     width: 100%;
+    margin-left: 0;
     align-self: stretch;
     margin-bottom: 15px;
   }

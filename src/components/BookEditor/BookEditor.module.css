@@ -1,16 +1,17 @@
 @keyframes show {
   0% {
     opacity: 0;
+    transform: translate(-20%, 0);
   }
 
   100% {
     opacity: 1;
+    transform: translate(0, 0);
   }
 }
 
 .wrapper {
   width: 100%;
-  margin-top: 30px;
   padding: 30px;
   background-color: white;
   box-shadow: 0 11px 27px 0 rgba(78, 160, 237, 0.2);
