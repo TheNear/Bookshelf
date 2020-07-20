@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c895415b194686fa773ac544d35d6d06",
+    "revision": "e066557eac4d3a5c9b0eb21da4afc84e",
     "url": "/Bookshelf/index.html"
   },
   {
-    "revision": "4e38ac382ca8e3c35146",
-    "url": "/Bookshelf/static/css/main.807f3291.chunk.css"
+    "revision": "56ae82ac84be905b7c31",
+    "url": "/Bookshelf/static/css/main.ac050767.chunk.css"
   },
   {
     "revision": "2cae98883a739f28ee78",
@@ -16,31 +16,31 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Bookshelf/static/js/2.fb14ae52.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4e38ac382ca8e3c35146",
-    "url": "/Bookshelf/static/js/main.1d1d3299.chunk.js"
+    "revision": "56ae82ac84be905b7c31",
+    "url": "/Bookshelf/static/js/main.613b75b7.chunk.js"
   },
   {
     "revision": "90c45a6dc1a2c4745eca",
     "url": "/Bookshelf/static/js/runtime-main.6770961f.js"
   },
   {
-    "revision": "4a6848ac728ad06451b221606ea5102a",
-    "url": "/Bookshelf/static/media/book.4a6848ac.svg"
+    "revision": "5af7ee4eef23a176f09c43f17dc85538",
+    "url": "/Bookshelf/static/media/book.5af7ee4e.svg"
   },
   {
     "revision": "3eadce1685240a13a3ee5f9a223fbbe6",
     "url": "/Bookshelf/static/media/cancel.3eadce16.svg"
   },
   {
-    "revision": "50d147293e706ba10be28f9e5465605f",
-    "url": "/Bookshelf/static/media/disk.50d14729.svg"
+    "revision": "6ed041eed7315ba366bf9ccc31cfe64f",
+    "url": "/Bookshelf/static/media/disk.6ed041ee.svg"
   },
   {
     "revision": "31fbd85d3d27eb87e1c39762726836d6",
     "url": "/Bookshelf/static/media/garbage.31fbd85d.svg"
   },
   {
-    "revision": "a1cd3cdb347b7d3c7dd2fd7b45529084",
-    "url": "/Bookshelf/static/media/pencil.a1cd3cdb.svg"
+    "revision": "11fcd580e1bebe41fb2b79de6c08cd92",
+    "url": "/Bookshelf/static/media/pencil.11fcd580.svg"
   }
 ]);
