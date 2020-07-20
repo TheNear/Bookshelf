@@ -8,6 +8,8 @@ import { useForm } from "../../hooks/useForm";
 import { addBook } from "../../redux/books/action";
 import { bookValidation } from "../../assets/js/validation";
 import { resetEditor } from "../../redux/editor/action";
+import { ReactComponent as CancelPic } from "../../assets/img/cancel.svg";
+import { ReactComponent as SavePic } from "../../assets/img/disk.svg";
 
 const editorInputs = [
   {
@@ -60,7 +62,7 @@ function BookEditor({ toggleEditor }) {
 
   return (
     <div className={style.wrapper}>
-      <h2>Редактирование книги</h2>
+      <h2 className={style.title}>Редактирование книги</h2>
       <form onSubmit={handleSubmit}>
         {editorInputs.map((input) => (
           <CustomInput
@@ -74,9 +76,20 @@ function BookEditor({ toggleEditor }) {
             onChange={handleChange}
           />
         ))}
-        <div>
-          <CustomButton type="submit">Сохранить</CustomButton>
-          <CustomButton type="button" onClick={toggleEditor}>
+        <div className={style.buttons}>
+          <CustomButton
+            Icon={SavePic}
+            type="submit"
+            className={style.button_save}
+          >
+            Сохранить
+          </CustomButton>
+          <CustomButton
+            Icon={CancelPic}
+            type="button"
+            className={style.button_cancel}
+            onClick={toggleEditor}
+          >
             Отменить
           </CustomButton>
         </div>

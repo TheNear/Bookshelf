@@ -1,8 +1,9 @@
 .book {
   padding: 10px;
   max-width: 100%;
-  min-height: 130px;
+  min-height: 160px;
   display: flex;
+  border-bottom: 1px solid #e9f4fe;
   /* justify-content: space-between; */
 }
 
@@ -26,11 +27,42 @@
   justify-content: center;
   flex-grow: 1;
   padding: 0 20px;
-  cursor: pointer;
 }
 
 .buttons {
   display: flex;
+  padding: 15px 0;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.button {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.text {
+  font-size: 13px;
+  color: #585858
+}
+
+.button_delete {
+  background-color: #6082a3;
+}
+
+.button_delete path {
+  fill: #6082a3;
+}
+
+.button_edit {
+  background-color: #89c4fc;
+}
+
+.button_edit path {
+  fill: #89c4fc;
 }

@@ -1,0 +1,16 @@
+.main_button {
+  align-self: start;
+  background-color: #1489f8;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.main_button path {
+  fill: #1489f8;
+}
+
+.title {
+  color: #1365b4;
+  font-size: 45px;
+  margin-bottom: 40px;
+}

@@ -1,6 +1,33 @@
 .wrapper {
   width: 100%;
-  height: 100%;
   margin-top: 30px;
   padding: 30px;
+  background-color: white;
+  box-shadow: 0 11px 27px 0 rgba(78, 160, 237, 0.2);
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_cancel {
+  background-color: #6082a3;
+}
+
+.button_cancel path {
+  fill: #6082a3;
+}
+
+.button_save {
+  margin: 0 15px;
+  background-color: #89c4fc;
+}
+
+.button_save path {
+  fill: #89c4fc;
 }

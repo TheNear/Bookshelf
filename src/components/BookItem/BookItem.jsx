@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import style from "./BookItem.module.css";
+import CustomButton from "../../componentsHelper/CustomButton/CustomButton";
+import { ReactComponent as EditPic } from "../../assets/img/pencil.svg";
+import { ReactComponent as DeletePic } from "../../assets/img/garbage.svg";
 
 function BookItem({ title, img, date, author, removeHandler, editHandler }) {
   return (
@@ -12,18 +15,26 @@ function BookItem({ title, img, date, author, removeHandler, editHandler }) {
           className={style.image}
         />
       </div>
-      <div tabIndex={0} role="button" className={style.info}>
-        <h3>{title}</h3>
-        <p>{author}</p>
-        <p>{date}</p>
+      <div className={style.info}>
+        <h3 className={style.title}>{title}</h3>
+        <p className={style.text}>{author}</p>
+        <p className={style.text}>{date && `${date} г.`}</p>
       </div>
       <div className={style.buttons}>
-        <button type="button" onClick={editHandler}>
+        <CustomButton
+          Icon={EditPic}
+          onClick={editHandler}
+          className={style.button_edit}
+        >
           Редактировать
-        </button>
-        <button type="button" onClick={removeHandler}>
+        </CustomButton>
+        <CustomButton
+          Icon={DeletePic}
+          onClick={removeHandler}
+          className={style.button_delete}
+        >
           Удалить
-        </button>
+        </CustomButton>
       </div>
     </li>
   );

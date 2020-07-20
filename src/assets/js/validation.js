@@ -4,6 +4,7 @@ const MIN_AUTHOR_LENGTH = 3;
 const MAX_AUTHOR_LENGTH = 30;
 const IMG_URL_REGEXP = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/;
 const DATE_REGEXP = /^\d{4}$/;
+const MAX_DATE_YEAR = "2017";
 
 export const bookValidation = ({
   book_title: title,
@@ -24,12 +25,12 @@ export const bookValidation = ({
     errors.book_title = `Заголовок должен быть не меньше ${MIN_TITLE_LENGTH} и не больше ${MAX_TITLE_LENGTH}.`;
   }
 
+  if (date > MAX_DATE_YEAR) {
+    errors.book_date = `Год не может быть больше ${MAX_DATE_YEAR}`;
+  }
+
   if (date && !DATE_REGEXP.test(date)) {
     errors.book_date = `Некорректная дата. Пример : "2004". `;
-
-    if (date > new Date().getFullYear) {
-      errors.book_date = `Год не может быть больше текущего`;
-    }
   }
 
   if (img && !IMG_URL_REGEXP.test(img)) {
