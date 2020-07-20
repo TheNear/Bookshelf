@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/Bookshelf/static/css/main.ac050767.chunk.css",
-    "main.js": "/Bookshelf/static/js/main.613b75b7.chunk.js",
-    "main.js.map": "/Bookshelf/static/js/main.613b75b7.chunk.js.map",
+    "main.css": "/Bookshelf/static/css/main.14851b2e.chunk.css",
+    "main.js": "/Bookshelf/static/js/main.4df37f8d.chunk.js",
+    "main.js.map": "/Bookshelf/static/js/main.4df37f8d.chunk.js.map",
     "runtime-main.js": "/Bookshelf/static/js/runtime-main.6770961f.js",
     "runtime-main.js.map": "/Bookshelf/static/js/runtime-main.6770961f.js.map",
-    "static/js/2.fb14ae52.chunk.js": "/Bookshelf/static/js/2.fb14ae52.chunk.js",
-    "static/js/2.fb14ae52.chunk.js.map": "/Bookshelf/static/js/2.fb14ae52.chunk.js.map",
+    "static/js/2.ea5e169a.chunk.js": "/Bookshelf/static/js/2.ea5e169a.chunk.js",
+    "static/js/2.ea5e169a.chunk.js.map": "/Bookshelf/static/js/2.ea5e169a.chunk.js.map",
     "index.html": "/Bookshelf/index.html",
-    "precache-manifest.d076031964a0c8fb42170bddf9b53fcd.js": "/Bookshelf/precache-manifest.d076031964a0c8fb42170bddf9b53fcd.js",
+    "precache-manifest.10fca2e143221c8676942ff5adb6889c.js": "/Bookshelf/precache-manifest.10fca2e143221c8676942ff5adb6889c.js",
     "service-worker.js": "/Bookshelf/service-worker.js",
-    "static/css/main.ac050767.chunk.css.map": "/Bookshelf/static/css/main.ac050767.chunk.css.map",
-    "static/js/2.fb14ae52.chunk.js.LICENSE.txt": "/Bookshelf/static/js/2.fb14ae52.chunk.js.LICENSE.txt",
+    "static/css/main.14851b2e.chunk.css.map": "/Bookshelf/static/css/main.14851b2e.chunk.css.map",
+    "static/js/2.ea5e169a.chunk.js.LICENSE.txt": "/Bookshelf/static/js/2.ea5e169a.chunk.js.LICENSE.txt",
     "static/media/book.5af7ee4e.svg": "/Bookshelf/static/media/book.5af7ee4e.svg",
     "static/media/cancel.3eadce16.svg": "/Bookshelf/static/media/cancel.3eadce16.svg",
     "static/media/disk.6ed041ee.svg": "/Bookshelf/static/media/disk.6ed041ee.svg",
+    "static/media/epambook.png": "/Bookshelf/static/media/epambook.5d9b8ac5.png",
     "static/media/garbage.31fbd85d.svg": "/Bookshelf/static/media/garbage.31fbd85d.svg",
     "static/media/pencil.11fcd580.svg": "/Bookshelf/static/media/pencil.11fcd580.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.6770961f.js",
-    "static/js/2.fb14ae52.chunk.js",
-    "static/css/main.ac050767.chunk.css",
-    "static/js/main.613b75b7.chunk.js"
+    "static/js/2.ea5e169a.chunk.js",
+    "static/css/main.14851b2e.chunk.css",
+    "static/js/main.4df37f8d.chunk.js"
   ]
 }
