@@ -3,6 +3,7 @@ import BookList from "./components/BooksList/BookList";
 import BookEditor from "./components/BookEditor/BookEditor";
 import CustomButton from "./componentsHelper/CustomButton/CustomButton";
 import { ReactComponent as Book } from "./assets/img/book.svg";
+import { ReactComponent as Cancel } from "./assets/img/cancel.svg";
 import style from "./App.module.css";
 
 function App() {
@@ -16,9 +17,9 @@ function App() {
     <>
       <h1 className={style.title}>Книжная полка</h1>
       <CustomButton
-        Icon={Book}
+        Icon={isEdit ? Cancel : Book}
         onClick={toggleEditor}
-        className={style.main_button}
+        className={`${style.main_button} ${isEdit && style.main_button_cancel}`}
       >
         {isEdit ? `Отменить` : `Добавить книгу`}
       </CustomButton>

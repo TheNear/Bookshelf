@@ -1,12 +1,39 @@
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
 .main_button {
   align-self: start;
   background-color: #1489f8;
   font-size: 20px;
   margin-bottom: 30px;
+  transition: all 0.5s ease;
+  width: 250px;
+}
+
+.main_button:focus,
+.main_button:hover {
+  filter: none;
+}
+
+.main_button_cancel {
+  background-color: #F26065;
 }
 
 .main_button path {
+  animation: show 0.7s ease;
   fill: #1489f8;
+}
+
+.main_button_cancel path {
+  animation: show 0.7s ease;
+  fill: #F26065;
 }
 
 .title {
@@ -34,8 +61,9 @@
   }
 
   .main_button {
+    width: 100%;
     align-self: stretch;
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 
 }

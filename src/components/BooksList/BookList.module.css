@@ -1,5 +1,16 @@
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .book_list {
   list-style: none;
   background-color: white;
   box-shadow: 0 11px 27px 0 rgba(78, 160, 237, 0.2);
+  animation: show 0.5s ease;
 }
