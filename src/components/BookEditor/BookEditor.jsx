@@ -10,6 +10,7 @@ import { bookValidation } from "../../assets/js/validation";
 import { resetEditor } from "../../redux/editor/action";
 import { ReactComponent as CancelPic } from "../../assets/img/cancel.svg";
 import { ReactComponent as SavePic } from "../../assets/img/disk.svg";
+import { ESC_KEY } from "../../assets/js/constants";
 
 const editorInputs = [
   {
@@ -53,12 +54,20 @@ function BookEditor({ toggleEditor }) {
   );
 
   useEffect(() => {
+    const closeEditor = (evt) => {
+      if (evt.keyCode === ESC_KEY) {
+        toggleEditor();
+      }
+    };
+
     setValues(editor);
+    document.addEventListener("keydown", closeEditor);
 
     return () => {
+      document.removeEventListener("keydown", closeEditor);
       dispatch(resetEditor());
     };
-  }, [dispatch, editor, setValues]);
+  }, [dispatch, editor, setValues, toggleEditor]);
 
   return (
     <div className={style.wrapper}>
