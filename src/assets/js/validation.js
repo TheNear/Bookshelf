@@ -1,7 +1,7 @@
 const MIN_TITLE_LENGTH = 5;
-const MAX_TITLE_LENGTH = 50;
+const MAX_TITLE_LENGTH = 100;
 const MIN_AUTHOR_LENGTH = 3;
-const MAX_AUTHOR_LENGTH = 25;
+const MAX_AUTHOR_LENGTH = 30;
 const IMG_URL_REGEXP = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/;
 const DATE_REGEXP = /^\d{4}$/;
 

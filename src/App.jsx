@@ -6,18 +6,22 @@ import BookEditor from "./components/BookEditor/BookEditor";
 function App() {
   const [isEdit, isEditToggle] = useState(false);
 
+  const toggleEditor = () => {
+    console.log(isEdit);
+    isEditToggle(!isEdit);
+  };
+
   return (
     <>
       <h1>Книжная полка</h1>
-      <button
-        type="button"
-        onClick={() => {
-          isEditToggle(!isEdit);
-        }}
-      >
+      <button type="button" onClick={toggleEditor}>
         {isEdit ? `Отменить` : `Добавить книгу`}
       </button>
-      {isEdit ? <BookEditor /> : <BookList />}
+      {isEdit ? (
+        <BookEditor toggleEditor={toggleEditor} />
+      ) : (
+        <BookList toggleEditor={toggleEditor} />
+      )}
     </>
   );
 }
