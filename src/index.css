@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  margin-left: calc(100vw - 100%);
-  margin-right: 0;
-}
-
 body {
   background-color: #e9f4fe;
   margin: 0;
@@ -30,4 +25,11 @@ code {
   height: 100vh;  
   margin: 0 auto;
   padding: 35px;
+}
+
+@media screen and (min-width: 960px) {
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
 }
